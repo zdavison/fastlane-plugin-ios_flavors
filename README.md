@@ -14,13 +14,18 @@ fastlane add_plugin ios_flavors
 
 Create multiple build flavors of an iOS .ipa file using a directory of .plist files.
 
-**Note to author:** Add a more detailed description about this plugin here. If your plugin contains multiple actions, make sure to mention them here.
-
 ## Example
 
-Check out the [example `Fastfile`](fastlane/Fastfile) to see how to use this plugin. Try it by cloning the repo, running `fastlane install_plugins` and `bundle exec fastlane test`.
-
-**Note to author:** Please set up a sample project to make it easy for users to explore what your plugin does. Provide everything that is necessary to try out the plugin in this project (including a sample Xcode/Android project if necessary)
+```ruby
+  create_ipa_flavors(
+    ipa: 'My App.ipa', # Base .ipa to use as basis for flavors.
+    flavors: 'path/to/flavors/', # [Optional] Directory of .plist files to use as inputs (each creates a new flavor) (default: 'fastlane/flavors')
+    output_directory: 'path/to/desired/output/directory', # [Optional] Directory to place flavors in. (default: 'fastlane/build_output/flavors')
+    target_plist: 'MyConfig.plist', # [Optional] .plist to replace with each flavor. (default: 'Info.plist')
+    signing_identity: 'Apple Distribution: Gem Technologies Limited (XXXXXXXXXXX)', # Signing identity with which to sign your flavor .ipa's
+    provisioning_profile: 'path/to/my/provisioning/profile', # [Optional if using `sigh`] Provisioning profile with which to sign your flavor .ipa's
+  )
+```
 
 ## Run tests for this plugin
 

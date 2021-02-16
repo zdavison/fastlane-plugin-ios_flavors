@@ -1,3 +1,6 @@
 lane :test do
-  ios_flavors
+  create_ipa_flavors(
+    ipa: 'My App.ipa',
+    signing_identity: 'Apple Distribution: Gem Technologies Limited (XXXXXXXXXXX)'
+  )
 end

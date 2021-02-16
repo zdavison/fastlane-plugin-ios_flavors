@@ -1,5 +1,6 @@
 *.gem
 Gemfile.lock
+vendor
 
 ## Documentation cache and generated files:
 /.yardoc/
@@ -10,3 +11,4 @@ fastlane/README.md
 fastlane/report.xml
 coverage
 test-results
+
