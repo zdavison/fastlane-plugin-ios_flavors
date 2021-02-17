@@ -23,7 +23,7 @@ Create multiple build flavors of an iOS .ipa file using a directory of .plist fi
     output_directory: 'path/to/desired/output/directory', # [Optional] Directory to place flavors in. (default: 'fastlane/build_output/flavors')
     target_plist: 'MyConfig.plist', # [Optional] .plist to replace with each flavor. (default: 'Info.plist')
     signing_identity: 'Apple Distribution: Gem Technologies Limited (XXXXXXXXXXX)', # Signing identity with which to sign your flavor .ipa's
-    provisioning_profile: 'path/to/my/provisioning/profile', # [Optional if using `sigh`] Provisioning profile with which to sign your flavor .ipa's
+    provisioning_profile: 'path/to/my/provisioning/profile', # [Optional, will attempt to automatically detect] Provisioning profile with which to sign your flavor .ipa's
   )
 ```
 

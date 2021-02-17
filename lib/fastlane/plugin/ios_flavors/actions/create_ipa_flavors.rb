@@ -51,7 +51,7 @@ module Fastlane
 
           FastlaneCore::ConfigItem.new(key: :output_directory,
             env_name: "IOS_FLAVORS_OUTPUT",
-            description: "The output flavors directory.",
+            description: "The output flavors directory",
             default_value: "fastlane/build_output/flavors",
             optional: true,
             type: String),
