@@ -71,7 +71,7 @@ module Fastlane
 
           FastlaneCore::ConfigItem.new(key: :provisioning_profile,
             env_name: "IOS_FLAVORS_PROVISIONING_PROFILE",
-            description: "The provisioning profile to use for signing flavors. Can be omitted if using `sigh`",
+            description: "The provisioning profile to use for signing flavors. Can be omitted if using `sigh`, or will automatically attempt to detect via the passed in .ipa file",
             optional: true,
             type: String),
           ]
